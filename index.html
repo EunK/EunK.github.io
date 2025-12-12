@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lim Eunkyoung Portfolio </title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font - Inter (For clean, modern look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 배경색 설정 (뉴모피즘의 핵심) */
+        :root {
+            --bg-color: #e0e5ec;
+            --main-text-color: #3f51b5; /* Soft Blue */
+            --dark-shadow: #a7a9ac;
+            --light-shadow: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: #4b5563; /* Gray */
+            transition: all 0.3s ease;
+        }
+
+        /* 뉴모피즘 '돌출된' 효과 (Outset) */
+        .neumorphic-outset {
+            border-radius: 1.5rem; /* rounded-3xl */
+            background: var(--bg-color);
+            box-shadow: 10px 10px 30px var(--dark-shadow), -10px -10px 30px var(--light-shadow);
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* 뉴모피즘 '눌린' 효과 (Inset) */
+        .neumorphic-inset {
+            border-radius: 1rem; /* rounded-xl */
+            background: var(--bg-color);
+            box-shadow: inset 5px 5px 10px var(--dark-shadow), inset -5px -5px 10px rgba(255, 255, 255, 0.231);
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* 뉴모피즘 버튼 스타일 */
+        .neumorphic-btn {
+            @apply flex items-center justify-center p-3 text-lg font-semibold;
+            @apply rounded-full;
+            background: var(--bg-color);
+            box-shadow: 6px 6px 12px var(--dark-shadow), -6px -6px 12px var(--light-shadow);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .neumorphic-btn:hover {
+            box-shadow: 3px 3px 6px var(--dark-shadow), -3px -3px 6px var(--light-shadow);
+            transform: scale(0.98);
+        }
+
+        .neumorphic-btn:active, .neumorphic-btn.active {
+            box-shadow: inset 4px 4px 8px var(--dark-shadow), inset -4px -4px 8px var(--light-shadow);
+            color: var(--main-text-color);
+            transform: scale(1);
+        }
+        .tech-section {
+            margin: 25px 0;
+        }
+
+        .tech-category {
+            font-weight: bold;
+            margin: 15px 0 8px;
+            font-size: 17px;
+            color: #5a1caa;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-item {
+            background: #f2f1f9;
+            border: 1px solid #d8d4ea;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        /* 아이콘 전용 작은 원형 버튼 */
+        .neumorphic-icon-btn {
+            @apply p-4;
+            @extend .neumorphic-btn;
+            border-radius: 50%;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-4xl mx-auto space-y-12">
+
+        <!-- ===== 1. 메인 / 소개 (연락처 포함) Section ===== -->
+        <section id="main" class="p-8 neumorphic-outset">
+            <div class="flex flex-col items-center text-center">
+                <!-- 프로필 이미지 (뉴모피즘 원형) -->
+                <div class="relative w-40 h-40 mb-6 rounded-full" style="background: var(--bg-color); box-shadow: 15px 15px 30px var(--dark-shadow), -15px -15px 30px var(--light-shadow);">
+                    <!-- 실제 이미지 대신 플레이스홀더 아이콘 사용 -->
+                    <svg class="absolute inset-0 w-2/3 h-2/3 m-auto text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                    </svg>
+                    <!-- 작은 하이라이트 원형 -->
+                    <div class="absolute top-0 right-0 w-8 h-8 rounded-full opacity-70" style="background: linear-gradient(135deg, rgba(255,255,255,0.8), transparent);"></div>
+                </div>
+
+                <h1 class="text-4xl font-extrabold mb-2" style="color: var(--main-text-color);">임은경 (Lim Eunkyoung)</h1>
+                <p class="text-xl font-light mb-6">Senior Full-Stack Engineer| AI 에이전트 및 MCP 서버 구축 역량 강화 중</p>
+                <p class="max-w-xl mb-8 text-gray-600">
+                    온라인 e-commerce 환경에서 프론트엔드·백엔드·운영까지 다뤄 온 경험 기반의 시니어 풀스택 엔지니어입니다. 
+                    서비스 구조 최적화, 레거시 개선, CI/CD 자동화 등 엔드투엔드 품질 향상을 주도하며 기술적 신뢰성을 쌓아 왔습니다. 
+                    최근에는 n8n 기반 서비스 제작을 시작으로 AI 에이전트 및 MCP 서버 기술로 전환을 진행하고 있으며, 
+                    Transformer·LLM·RAG·LoRA·벡터DB·FastAPI·Docker 등 핵심 AI/ML 역량을 확장하고 있습니다.
+                </p>
+
+                <!-- 연락처 버튼 그룹 -->
+                <div class="flex justify-center space-x-4">
+                    <a href="mailto:itthanatos@gmail.com" class="neumorphic-icon-btn text-blue-500 hover:text-blue-700" title="이메일 보내기">
+                        <!-- 이메일 아이콘 (Lucide: mail) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.83 1.83 0 0 1-2.06 0L2 7"/></svg>
+                    </a>
+                    <a href="https://github.com/my-profile" target="_blank" class="neumorphic-icon-btn text-gray-700 hover:text-black" title="GitHub">
+                        <!-- 깃허브 아이콘 (Lucide: github) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.44-1-3.5.25-1 .15-2.22 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.28-.2 2.5 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/my-profile" target="_blank" class="neumorphic-icon-btn text-indigo-700 hover:text-indigo-900" title="LinkedIn">
+                        <!-- 링크드인 아이콘 (Lucide: linkedin) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 0-6 6v7H6v-7a6 6 0 0 1 6-6h2a2 2 0 1 1 0 4h-2"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 2. 작업 / 프로젝트 Section ===== -->
+        <section id="projects" class="space-y-6">
+            <h2 class="text-3xl font-bold text-center" style="color: var(--main-text-color);">주요 작업 및 프로젝트</h2>
+            <div class="grid gap-10 md:grid-cols-2">
+
+                <!-- 프로젝트 카드 1 -->
+                <div class="neumorphic-outset p-6 hover:scale-[1.02] cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-2">지마켓, 옥션 iOS APP</h3>
+                    <p class="text-sm text-gray-500 mb-4">React, Tailwind CSS | 2024.11</p>
+                    <div class="h-[11rem] bg-gray-300 rounded-lg neumorphic-inset flex items-center justify-center overflow-hidden p-2">
+                        <img src="https://eunk.github.io/img/iOS.png" alt="iOS APP 이미지" class="w-full h-full object-cover">                       
+                    </div>
+                    <p class="mt-4 text-sm">
+                        지마켓, 옥션, 중고장터 iOS 앱 추가 기능 개발 및 운영 고도화
+                        지마켓 iOS 앱 전반 개편 및 고도화 
+                        스마일페이 iOS 앱 신규 런치
+                    </p>
+                </div>
+
+                <!-- 프로젝트 카드 2 -->
+                <div class="neumorphic-outset p-6 hover:scale-[1.02] cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-2">옥션 Web, 검색 엔진</h3>
+                    <p class="text-sm text-gray-500 mb-4">ASP .NET MVC, C#, AngularJS, C++, Linnux</p>
+                    <div class="h-[11rem] bg-gray-300 rounded-lg neumorphic-inset flex items-center justify-center overflow-hidden p-2">
+                    <img src="https://eunk.github.io/img/auction_web.png" alt="옥션 시스템 이미지" class="w-full h-full object-cover">
+                    </div>
+                    <p class="mt-4 text-sm">
+                        옥션 Home, 상품 검색, 상세, 장바구니, 주문 web 개발 및 운영보수
+                        옥션 상품 검색 엔진 운영 및 유지 보수
+                    </p>
+                </div>
+                <!-- 프로젝트 카드 3 -->
+                <div class="neumorphic-outset p-6 hover:scale-[1.02] curs, or-pointer">
+                    <h3 class="text-xl font-semibold mb-2">옥션 API 개발</h3>
+                    <p class="text-sm text-gray-500 mb-4">Node.js, C#, WCFRedis, MsSql, Windows </p>
+                    <div class="h-[11rem] bg-gray-300 rounded-lg neumorphic-inset flex items-center justify-center overflow-hidden p-2">
+                        <img src="https://eunk.github.io/img/api.png" alt="옥션 API 이미지" class="w-full h-full object-cover">
+                    </div>
+                    <p class="mt-4 text-sm">
+                        도메인 업무 전용 (상품 상세, 검색) 내부 RESTful API 서버 구축, 개발,  운영 
+                        Web, Mobile 전용 외부 RESTful API 서버 구축, 개발,  운영 
+                    </p>
+                    <!-- <a href="#" class="block mt-4 text-center neumorphic-btn text-base w-full">자세히 보기</a> -->
+                </div>
+                 
+                <!-- 프로젝트 카드 4 -->
+                <div class="neumorphic-outset p-6 hover:scale-[1.02] cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-2">인터파크 </h3>
+                    <p class="text-sm text-gray-500 mb-4">ASP .NET C#, Visual C+, ASP, JavaScript, MS-Sql, Oracle</p>
+                    <div class="h-[11rem] bg-gray-300 rounded-lg neumorphic-inset flex items-center justify-center overflow-hidden p-2">
+    <img src="https://eunk.github.io/img/api.png" alt="포트폴리오 이미지" class="w-full h-full object-cover" >
+</div>
+
+                    
+                    <p class="mt-4 text-sm">
+                        티켓 파크 웹사이트, 판매 관리 시스템, 외부상품 연동 시스템, 모바일 WAP 개발 및 운영
+                    </p>
+                    <!-- <a href="#" class="block mt-4 text-center neumorphic-btn text-base w-full">자세히 보기</a> -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== 3. 경력 / 기술 Section ===== -->
+        <section id="skills" class="space-y-6">
+            <h2 class="text-3xl font-bold text-center" style="color: var(--main-text-color);">경력 및 기술 스택</h2>
+            <!-- 경력 섹션 -->
+            <div class="neumorphic-outset p-6">
+                <h3 class="text-2xl font-semibold mb-4">경력 사항</h3>
+                <div class="space-y-4">
+                    <!-- 경력 항목 1 -->
+                    <div class="p-4 rounded-xl neumorphic-inset">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-lg font-bold">지마켓</h4>
+                            <span class="text-sm font-medium text-gray-500">2021.06~2024.12</span>
+                        </div>
+                        <p class="text-base font-medium text-gray-700">Mobile Application팀</p>
+                        <ul class="list-disc list-inside mt-2 ml-4 text-sm text-gray-600 space-y-1">
+                            <li>지마켓·옥션·스마일페이·중고장터 iOS 앱 전반의 기능 개발 및 운영 고도화</li>
+                            <li>지마켓 iOS 전면 개편 프로젝트 참여</li>
+                            <li>지마켓·옥션 레거시 제거 및 공통 모듈 업그레이드 프로젝트 수행</li>
+                            <li>핵심 서비스 기능 신규 개발 및 안정화 운영</li>
+                        </ul>
+                    </div>
+                    <!-- 경력 항목 2 -->
+                    <div class="p-4 rounded-xl neumorphic-inset">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-lg font-bold">eBay Korea</h4>
+                            <span class="text-sm font-medium text-gray-500">2010.01 ~2021.05</span>
+                        </div>
+                        <p class="text-base font-medium text-gray-700">Full Stack Developer</p>
+                        <ul class="list-disc list-inside mt-2 ml-4 text-sm text-gray-600 space-y-1">
+                            <li>지마켓, 옥션 iOS APP, 옥션 상품, 검색 도메인 담당</li>
+                            <li>옥션 iOS App 추가 개발및 운영</li>
+                            <li>스마일 페이 iOS App 신규 런칭</li>
+                            <li>지마켓 iOS App 내 스마일배송 신규 개발및 운영</li>
+                            <li>옥션 VIP, 검색 웹사이트, API 추가 개발및 운영</li>
+                            <li>silverlight 활용한 Mart 코너 개발</li>
+                            <li>MVC 이용한 Auction Mart Site 구축및 운영</li>
+                            <li>지마켓, 옥션 iOS APP 추가 개발및 운영</li>
+                        </ul>
+                    </div>
+                    <!-- 경력 항목 3 -->
+                    <div class="p-4 rounded-xl neumorphic-inset">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-lg font-bold">옥션</h4>
+                            <span class="text-sm font-medium text-gray-500">2004.01 ~2009.12</span>
+                        </div>
+                        <p class="text-base font-medium text-gray-700">Full Stack Developer</p>
+                        <ul class="list-disc list-inside mt-2 ml-4 text-sm text-gray-600 space-y-1">
+                            <li>옥션 Escow, 상품, 검색 도메인 담당</li>
+                            <li>옥션 Home, 검색, 상품 상세, 리스팅 웹사이트 개발 및 운영</li>
+                            <li>옥션 Home 속도및 성능개선 프로젝트 진행</li>
+                            <li>옥션 Home, 검색, 상품 상세, 리스팅 컨텐츠 admin web 사이트 개발및 운영</li>
+                            <li>Escrow (장바구니, 배송프로세스 개편등) 개발 및 운영</li>
+                            <li>옥션 .Net Upgrade 프로젝트</li>
+                        </ul>
+                    </div>
+                    <!-- 경력 항목 4 -->
+                    <div class="p-4 rounded-xl neumorphic-inset">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-lg font-bold">인터파크</h4>
+                            <span class="text-sm font-medium text-gray-500">2000.02~ 2004.05</span>
+                        </div>
+                        <p class="text-base font-medium text-gray-700">Full Stack Developer</p>
+                        <ul class="list-disc list-inside mt-2 ml-4 text-sm text-gray-600 space-y-1">
+                            <li>티켓 파크 담당</li>
+                            <li>티켓 파크 웹사이트 개발 및 운영</li>
+                            <li>티켓 판매 관리 시스템 개발 및 운영</li>
+                            <li>외부상품 연동 시스템 개발</li>
+                            <li>모바일 WAP 개발</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+           <!-- 기술 스택 섹션 -->
+            <div class="neumorphic-outset p-6">
+                <h3 class="text-2xl font-semibold mb-4">기술 스택</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- H/W & DBMS -->
+                    <div class="p-6 rounded-xl neumorphic-inset">
+                        <div class="flex items-center gap-2 mb-4">
+                            <!-- 아이콘 SVG -->
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-gray-600">
+                                <!-- 서버 박스 -->
+                                <rect x="3" y="3" width="18" height="8" rx="2" ry="2"></rect>
+                                <line x1="3" y1="7" x2="21" y2="7"></line>
+
+                                <!-- 데이터베이스 (원통) -->
+                                <ellipse cx="12" cy="16" rx="9" ry="3"></ellipse>
+                                <path d="M3 16v4c0 1.66 4.03 3 9 3s9-1.34 9-3v-4"></path>
+                                <path d="M3 20c0 1.66 4.03 3 9 3s9-1.34 9-3"></path>
+                            </svg>
+                            <!-- 제목 -->
+                            <h3 class="text-base font-semibold text-gray-700">H/W & DBMS</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">MS SQL</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">Oracle</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">Redis</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">Windows</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">Linux</span>
+                        </div>
+                    </div>
+                     <!-- Languages -->
+                    <div class="p-6 rounded-xl neumorphic-inset">
+                        <div class="flex items-center gap-2 mb-4">
+                            <!-- 아이콘 SVG -->
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-gray-600">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            <!-- 제목 -->
+                            <h3 class="text-base font-semibold text-gray-700">Language</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">Objective-C</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">Swift/SwiftUI</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">Node.js</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">C#/ASP .NET MVC</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">WCF</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">XML/HTML</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">AngularJS/jQuery/JavaScript</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">Visual C++</span>
+                        </div>
+                    </div>
+                    <!-- Tools -->
+                    <div class="p-4 rounded-xl neumorphic-inset md:col-span-2">
+                        <div class="flex items-center gap-2 mb-4">
+                            <!-- CI/CD Pipeline Icon -->
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-gray-600">
+                                <path d="M6 9l6-6 6 6"></path>
+                                <path d="M6 15l6 6 6-6"></path>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                            <!-- 제목 -->
+                            <h3 class="text-base font-semibold text-gray-700">Tools & Etc</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">Jira</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">Jenkins</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">Git</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">Slack</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">Notion</span>
+                            <span class="px-4 py-2 text-sm font-medium rounded-md neumorphic-inset hover:shadow-none cursor-default">Figma</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-sm text-gray-500 py-6">
+            © 2025 임은경 포트폴리오. All Rights Reserved.
+        </footer>
+
+    </div>
+</body>
+</html>
