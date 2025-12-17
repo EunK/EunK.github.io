@@ -103,13 +103,12 @@
         <section id="main" class="p-8 neumorphic-outset">
             <div class="flex flex-col items-center text-center">
                 <!-- 프로필 이미지 (뉴모피즘 원형) -->
-                <div class="relative w-40 h-40 mb-6 rounded-full" style="background: var(--bg-color); box-shadow: 15px 15px 30px var(--dark-shadow), -15px -15px 30px var(--light-shadow);">
+                <div class="relative w-40 h-40 mb-6 rounded-full overflow-hidden mx-auto" style="background: var(--bg-color); box-shadow: 15px 15px 30px var(--dark-shadow), -15px -15px 30px var(--light-shadow);">
+                      <img src="https://eunk.github.io/img/profile.png" alt="Profile" class="w-full h-full object-cover"/>
                     <!-- 실제 이미지 대신 플레이스홀더 아이콘 사용 -->
-                    <svg class="absolute inset-0 w-2/3 h-2/3 m-auto text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-                    </svg>
+                    
                     <!-- 작은 하이라이트 원형 -->
-                    <div class="absolute top-0 right-0 w-8 h-8 rounded-full opacity-70" style="background: linear-gradient(135deg, rgba(255,255,255,0.8), transparent);"></div>
+                    <!-- <div class="absolute top-0 right-0 w-8 h-8 rounded-full opacity-70" style="background: linear-gradient(135deg, rgba(255,255,255,0.8), transparent);"></div> -->
                 </div>
 
                 <h1 class="text-4xl font-extrabold mb-2" style="color: var(--main-text-color);">임은경 (Lim Eunkyoung)</h1>
