@@ -1,6 +1,6 @@
 main:
-  - title: "Write-Ups"
-    url: /writeups/
+  # - title: "Write-Ups"
+  #   url: /writeups/
 
   - title: "Projects"
     url: /projects/    
