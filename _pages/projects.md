@@ -5,11 +5,45 @@ permalink: /projects/
 author_profile: true
 ---
 
-# 주요 작업 및 프로젝트
 
-| 프로젝트 (Project) | 기술 스택 (Tech Stack) | 설명 (Description) |
-| :--- | :--- | :--- |
-| **[지마켓, 옥션 iOS APP](https://apps.apple.com/us/app/g%EB%A7%88%EC%BC%93/id340330132)**<br><img src="https://eunk.github.io/img/iOS.png" width="300"> | `Swift`<br>`Objective-C`<br>`SwiftUI` | • 지마켓, 옥션, 중고장터 iOS 앱 추가 기능 개발 및 운영 고도화<br>• 지마켓 iOS 앱 전반 개편 및 고도화<br>• 스마일페이 iOS 앱 신규 런치 |
-| **[옥션 Web, 검색 엔진](https://www.auction.co.kr/)**<br><img src="https://eunk.github.io/img/auction_web.png" width="300"> | `ASP .NET MVC`<br>`C#`, `AngularJS`<br>`C++`, `Linux` | • 옥션 Home, 상품 검색, 상세, 장바구니, 주문 web 개발 및 운영보수<br>• 옥션 상품 검색 엔진 운영 및 유지 보수 |
-| **옥션 API 개발**<br><img src="https://eunk.github.io/img/api.png" width="300"> | `Node.js`, `C#`<br>`WCF`, `Redis`<br>`MsSql`, `Windows` | • 도메인 업무 전용 (상품 상세, 검색) 내부 RESTful API 서버 구축, 개발, 운영<br>• Web, Mobile 전용 외부 RESTful API 서버 구축, 개발, 운영 |
-| **[인터파크](https://nol.interpark.com/ticket)**<br><img src="https://eunk.github.io/img/interpark.png" width="300"> | `ASP .NET C#`<br>`Visual C+`<br>`ASP`, `JavaScript`<br>`MS-Sql`, `Oracle` | • 티켓 파크 웹사이트, 판매 관리 시스템 개발 및 운영<br>• 외부상품 연동 시스템, 모바일 WAP 개발 및 운영 |
+<!-- 카드 1 -->
+## [**<span style="color: brown;">지마켓, 옥션 iOS APP</span>**](https://apps.apple.com/us/app/g%EB%A7%88%EC%BC%93/id340330132)
+*Swift, Objective-C, SwiftUI*
+
+<img src="https://eunk.github.io/images/iOS.png" alt="iOS APP 이미지" style="width:100%; max-width:600px; height:auto;">
+
+지마켓, 옥션, 중고장터 iOS 앱 추가 기능 개발 및 운영 고도화  
+지마켓 iOS 앱 전반 개편 및 고도화  
+스마일페이 iOS 앱 신규 런치
+
+---
+
+<!-- 카드 2 -->
+## [**<span style="color: brown;">옥션 Web, 검색 엔진</span>**](https://www.auction.co.kr/)
+*ASP .NET MVC, C#, AngularJS, C++, Linux*
+
+<img src="https://eunk.github.io/images/auction_web.png" alt="옥션 시스템 이미지" style="width:100%; max-width:600px; height:auto;">
+
+옥션 Home, 상품 검색, 상세, 장바구니, 주문 web 개발 및 운영보수  
+옥션 상품 검색 엔진 운영 및 유지 보수
+
+---
+
+<!-- 카드 3 -->
+## 옥션 API 개발
+*Node.js, C#, WCF, Redis, MsSql, Windows*
+
+<img src="https://eunk.github.io/images/api.png" alt="옥션 API 이미지" style="width:100%; max-width:600px; height:auto;">
+
+도메인 업무 전용 (상품 상세, 검색) 내부 RESTful API 서버 구축, 개발, 운영  
+Web, Mobile 전용 외부 RESTful API 서버 구축, 개발, 운영
+
+---
+
+<!-- 카드 4 -->
+## [**<span style="color: brown;">인터파크</span>**](https://nol.interpark.com/ticket)
+*ASP .NET C#, Visual C+, ASP, JavaScript, MS-Sql, Oracle*
+
+<img src="https://eunk.github.io/images/interpark.png" alt="포트폴리오 이미지" style="width:100%; max-width:600px; height:auto;">
+
+티켓 파크 웹사이트, 판매 관리 시스템, 외부상품 연동 시스템, 모바일 WAP 개발 및 운영
