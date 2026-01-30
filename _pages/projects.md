@@ -5,6 +5,17 @@ permalink: /projects/
 author_profile: true
 ---
 
+<!-- 카드 1 -->
+> ## **<span style="color: brown;">NexOps AI Agent</span>**
+> *Python, Chromadb, Openai, PyMuPDF*
+>
+> <a href="https://github.com/ksjang99-lgtm/langchain-rag/" style="text-decoration:none; color:inherit;"><img src="https://eunk.github.io/images/NexOps.png" alt="iOS APP 이미지" style="width:100%; max-width:360px; height:auto; margin: 0 10px;"></a>
+> 
+> Multimodal RAG
+> 문서, 이미지, 텍스트등의 데이타를 통합 처리하여 정확한 문서기반의 가이드  
+> 검증된 오픈소스와 관리형 서비스 조합하여 개발속도와 운영 안정성 확보
+
+---
 
 <!-- 카드 1 -->
 > ## **<span style="color: brown;">지마켓, 옥션 iOS APP</span>**
